@@ -1,5 +1,5 @@
 {
-  "name": "wikifinder",
+  "name": "pediaviewer",
   "version": "1.0.0",
   "description": "search wikipedia",
   "main": "app.js",
