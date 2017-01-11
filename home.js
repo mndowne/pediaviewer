@@ -1,5 +1,6 @@
 $(document).ready(function(){
-        $("#inputSubmit").click(function(){
+
+        function submitPressed(){
                 $(".info").remove();
                 $(".wrong").remove();
                 var bla = $('#inputBox').val();
@@ -78,6 +79,16 @@ $(document).ready(function(){
                         $('body').append("<h3 class=\"wrong\"style=\"text-align: center\">Not the results you were looking for? Try another search!</h3>")},
                         5000);
 
-        });//button clicked
+        }//button clicked
 
+        
+        $("#inputSubmit").click(function(){
+            submitPressed();
+        });
+
+        $(document).keypress(function(key){
+                if (key.keyCode == 13 || key.keycharCode){
+                        submitPressed();
+                }
+        });
 });
